@@ -9,7 +9,7 @@ import java.util.Map;
 @RequestMapping("/")
 public class UtilsController {
 
-    @GetMapping("/health/")
+    @GetMapping("/health")
     public ResponseEntity<Map<String, String>> healthCheck() {
         return ResponseEntity.ok(Map.of("status", "Java API is running ok"));
     }

@@ -12,7 +12,6 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
-import java.util.Map;
 
 @RestController
 @RequestMapping("/api/v1/cats")
@@ -26,12 +25,7 @@ public class CatController {
         this.objectMapper = objectMapper;
     }
 
-    @GetMapping("/health/")
-    public ResponseEntity<Map<String, String>> healthCheck() {
-        return ResponseEntity.ok(Map.of("status", "Java API is running ok"));
-    }
-
-    @GetMapping("/list/")
+    @GetMapping("/list")
     public ResponseEntity<List<Cat>> catsList() {
         return ResponseEntity.ok(catService.findAll());
     }
@@ -50,7 +44,7 @@ public class CatController {
         return ResponseEntity.ok(cat);
     }
 
-    @PostMapping("/save/")
+    @PostMapping("/save")
     public ResponseEntity<Cat> saveCat(@Valid @RequestBody SaveCatRequest request) throws JsonProcessingException {
         Cat cat = new Cat();
         cat.setCatId(request.getCatId());

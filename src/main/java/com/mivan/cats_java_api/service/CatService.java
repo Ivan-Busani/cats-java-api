@@ -53,6 +53,7 @@ public class CatService {
         existing.setWidth(cat.getWidth());
         existing.setHeight(cat.getHeight());
         existing.setBreeds(cat.getBreeds());
+        existing.setApiUsed("java");
         existing.setUpdatedAt(Instant.now());
         return catRepository.save(existing);
     }

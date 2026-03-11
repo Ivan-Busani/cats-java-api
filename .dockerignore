@@ -3,5 +3,11 @@ build
 !gradle
 .git
 .gitignore
+.env*
 *.md
+Dockerfile
+.dockerignore
 .DS_Store
+.idea
+.vscode
+*.iml
