@@ -13,7 +13,7 @@ import java.util.Optional;
 @Service
 public class CatService {
 
-    private static final String DUPLICATE_MESSAGE = "Ya existe un gato con este ID en la base de datos.";
+    private static final String DUPLICATE_MESSAGE = "Ya existe un gato con este ID en la base de datos";
     private final CatRepository catRepository;
 
     public CatService(CatRepository catRepository) {
