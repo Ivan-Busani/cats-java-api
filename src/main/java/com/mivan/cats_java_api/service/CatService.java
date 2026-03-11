@@ -21,7 +21,7 @@ public class CatService {
     }
 
     public List<Cat> findAll() {
-        return catRepository.findAll();
+        return catRepository.findAllByOrderByIdDesc();
     }
 
     public Optional<Cat> findById(Long id) {
