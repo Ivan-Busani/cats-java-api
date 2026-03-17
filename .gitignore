@@ -33,9 +33,10 @@ out/
 /nbdist/
 /.nb-gradle/
 
+# Environment
+.env
+.env.*
+!.env.example
+
 ### VS Code ###
 .vscode/
-
-# Environment (keep .env out of git)
-.env
-!.env.example
